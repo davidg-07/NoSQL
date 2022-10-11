@@ -4,7 +4,7 @@ const {
     getThought,
     getSingleThought,
     createThought,
-    addThought,
+    updateThought,
     deleteThought,
     addReaction,
     deleteReaction
