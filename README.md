@@ -48,23 +48,23 @@ To interact with the database you will need to use MongoDB Compass.
 ---
 ### Getting List of all Users 
 
-![Get Users]()  
+![Get Users](./images/2022-10-12.png)  
 
 ---
 ### Adding a User
 
-![Add Users]()  
+![Add Users](./images/2022-10-12%20(1).png)  
 
 ---
 
 ### Updating User Data 
 
-![Updating User]() 
+![Updating User](./images/2022-10-12%20(2).png) 
 
 ---
 ### Delete User
 
-![Create Category]()  
+![Delete Category](./images/2022-10-12%20(3).png)  
 
 ---
 
