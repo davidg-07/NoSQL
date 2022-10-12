@@ -41,16 +41,26 @@ module.exports = {
     },
     updateThought(req, res) {
         Thought.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-        .then((thought) => {
-            if (!thought) {
-                res.status(404).json({ message: 'No thought found with this id!' });
-                return;
-            }
-            res.json(thought);
-        })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+            .then((thought) => {
+                if (!thought) {
+                    res.status(404).json({ message: 'No thought found with this id!' });
+                    return;
+                }
+                res.json(thought);
+            })
+            .catch((err) => {
+                console.log(err);
+                res.status(500).json(err);
+            });
     },
+    deletethought(req, res) {
+        thought.findOneAndDelete({ _id: req.params.id })
+          .then((thought) =>
+            !thought
+              ? res.status(404).json({ message: 'No course with that ID' })
+              : Student.deleteMany({ _id: { $in: course.students } })
+          )
+          .then(() => res.json({ message: 'thought deleted!' }))
+          .catch((err) => res.status(500).json(err));
+      },
 }
